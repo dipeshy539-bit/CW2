@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The B-Side - Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="assets/icons/logo.jpeg" alt="The B-Side logo" class="logo">
+    <h1>The B-Side</h1>
+    <input type="text" placeholder="Search..." class="search-bar" aria-label="Search">
+    <a href="cart.html" class="cart-link">🛒 Cart (<span id="cartCount">0</span>)</a>
+  </header>
+
+  <nav>
+  <a href="index.html">Home</a>
+  <a href="albums.html">Albums</a>
+  <a href="merchandise.html">Merchandise</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+  <main class="container">
+    <h2>Contact Us</h2>
+    <p>Questions, requests, or feedback? Send us a message.</p>
+
+    <form id="contactForm" novalidate>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required placeholder="Your name" aria-required="true">
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required placeholder="you@example.com" aria-required="true">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required placeholder="Write your message" aria-required="true"></textarea>
+
+      <button type="submit">Send Message</button>
+      <p id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025, The B-Side. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

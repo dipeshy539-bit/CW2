@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart - The B-Side</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="assets/icons/logo.jpeg" alt="The B-Side logo" class="logo">
+    <h1>The B-Side</h1>
+    <input type="text" placeholder="Search albums..." class="search-bar">
+    <a href="cart.html" class="cart-link">🛒 Cart (<span id="cartCount">0</span>)</a>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="albums.html">Albums</a>
+    <a href="merchandise.html">Merchandise</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="container cart-info">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <button onclick="clearCart()">Clear Cart</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025, The B-Side. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
