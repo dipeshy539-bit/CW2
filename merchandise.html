@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The B-Side - Merchandise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="assets/icons/logo.jpeg" alt="The B-Side logo" class="logo">
+    <h1>The B-Side</h1>
+    <input type="text" id="searchInput" placeholder="Search merchandise..." class="search-bar" aria-label="Search merchandise">
+    <a href="cart.html" class="cart-link">🛒 Cart (<span id="cartCount">0</span>)</a>
+  </header>
+
+  <nav>
+  <a href="index.html">Home</a>
+  <a href="albums.html">Albums</a>
+  <a href="merchandise.html">Merchandise</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+  <main class="container">
+    <h2>Merchandise</h2>
+    <p>Exclusive pop and K‑Pop items — lightsticks, posters, apparel, and more.</p>
+
+    <div class="album-grid" id="merchGrid">
+
+
+
+      <div class="album-card">
+        <img src="assets/images/merch1.jpg" alt="Taylor Swift Hoodie">
+        <h4>Taylor Swift Hoodie</h4>
+        <p>£69.99</p>
+        <button onclick="toggleDetails(this)">Show Details</button>
+        <div class="album-details">
+          <p><strong>Type:</strong> Hoodie </p>
+          <p><strong>Artist:</strong> Taylor Swift </p>
+          <p><strong>Includes:</strong> Hoodie, Stickers </p>
+        </div>
+        <button onclick="addToCart('Taylor Swift Hoodie', 69.99)">Add to Cart</button>
+      </div>
+
+
+
+      <div class="album-card">
+        <img src="assets/images/merch2.jpg" alt="The Weeknd XO Hoodie">
+        <h4>The Weeknd XO Hoodie</h4>
+        <p>£71.99</p>
+        <button onclick="toggleDetails(this)">Show Details</button>
+        <div class="album-details">
+          <p><strong>Type:</strong> Hoodie </p>
+          <p><strong>Artist:</strong> The Weeknd </p>
+          <p><strong>Includes:</strong> Hoodie, Stickers </p>
+        </div>
+        <button onclick="addToCart('The Weeknd XO Hoodie', 71.99)">Add to Cart</button>
+      </div>
+
+
+
+      <div class="album-card">
+        <img src="assets/images/merch3.jpg" alt="Enhypen Lightstick">
+        <h4>Enhypen Lightstick</h4>
+        <p>£68.99</p>
+        <button onclick="toggleDetails(this)">Show Details</button>
+        <div class="album-details">
+          <p><strong>Type:</strong> Official Lightstick</p>
+          <p><strong>Artist:</strong> Enhypen </p>
+          <p><strong>Includes:</strong> Strap, Box, Photocard</p>
+        </div>
+        <button onclick="addToCart('Enhypen Lightstick', 68.99)">Add to Cart</button>
+      </div>
+
+
+
+      <div class="album-card">
+        <img src="assets/images/merch4.jpg" alt="Seventeen Lightstick">
+        <h4>Seventeen Lightstick</h4>
+        <p>£71.99</p>
+        <button onclick="toggleDetails(this)">Show Details</button>
+        <div class="album-details">
+          <p><strong>Type:</strong> Official Lightstick</p>
+          <p><strong>Artist:</strong> Seventeen </p>
+          <p><strong>Includes:</strong> Strap, Box, Photocard</p>
+        </div>
+        <button onclick="addToCart('Seventeen', 71.99)">Add to Cart</button>
+      </div>
+
+
+
+      <div class="album-card">
+        <img src="assets/images/merch5.jpg" alt="Tomorrow X Together Lightstick">
+        <h4>Tomorrow X Together Lightstick</h4>
+        <p>£67.99</p>
+        <button onclick="toggleDetails(this)">Show Details</button>
+        <div class="album-details">
+          <p><strong>Type:</strong> Official Lightstick</p>
+          <p><strong>Artist:</strong> Tomorrow X Together </p>
+          <p><strong>Includes:</strong> Strap, Box, Photocard</p>
+        </div>
+        <button onclick="addToCart('Tomorrow X Together Lightstick', 67.99)">Add to Cart</button>
+      </div>
+
+
+
+      <div class="album-card">
+        <img src="assets/images/merch6.jpg" alt="TWS Lightstick">
+        <h4>TWS Lightstick</h4>
+        <p>£65.99</p>
+        <button onclick="toggleDetails(this)">Show Details</button>
+        <div class="album-details">
+          <p><strong>Type:</strong> Official Lightstick</p>
+          <p><strong>Group:</strong> TWS </p>
+          <p><strong>Includes:</strong> Strap, Box, Photocard</p>
+        </div>
+        <button onclick="addToCart('TWS Lightstick', 65.99)">Add to Cart</button>
+      </div>
+
+
+
+    </div>
+
+  <footer>
+    <p>&copy; 2025, The B-Side. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
