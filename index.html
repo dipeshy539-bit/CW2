@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The B-Side - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="assets/icons/logo.jpg" alt="The B-Side logo" class="logo">
+    <h1>The B-Side</h1>
+    <input type="text" placeholder="Search albums..." class="search-bar">
+    <a href="cart.html" class="cart-link">🛒 Cart (<span id="cartCount">0</span>)</a>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="albums.html">Albums</a>
+    <a href="merchandise.html">Merchandise</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section class="new-arrivals">
+      <h3>New Arrivals</h3>
+      <div class="album-grid">
+        
+
+        <!-- album 1 -->
+
+        <div class="album-card">
+          <img src="assets/images/album1.jpg" alt="Lost in Heaven">
+          <h4>Lost in Heaven</h4>
+          <p>£13.99</p>
+          <button onclick="toggleDetails(this)">Show Details</button>
+          <div class="album-details">
+            <p><strong>Artist:</strong> Chase Atlantic </p>
+            <p><strong>Year:</strong> 2024 </p>
+            <p><strong>Format:</strong> CD, Digital</p>
+            <p><strong>Description:</strong> Lost in Heaven is the fourth studio album by alternative-R&B trio Chase Atlantic, released on 1 November 2024 through Fearless Records. </p>
+          </div>
+          <button onclick="addToCart('Lost in Heaven', 13.99)">Add to Cart</button></div>
+
+        
+
+          <!-- album 4 -->
+
+
+          <div class="album-card">   
+          <img src="assets/images/album4.jpg" alt="Do It">
+          <h4>Do It</h4>
+          <p>£23.99</p>
+          <button onclick="toggleDetails(this)">Show Details</button>
+          <div class="album-details">
+            <p><strong>Artist:</strong> Stray Kids </p>
+            <p><strong>Year:</strong> 2025 </p>
+            <p><strong>Format:</strong> CD, Digital</p>
+            <p><strong>Description:</strong> Do It is the second mixtape by South Korean boy band Stray Kids. It was released on November 21, 2025, through JYP Entertainment and Republic Records. </p>
+          </div>
+          <button onclick="addToCart('Do It', 23.99)">Add to Cart</button></div>
+
+
+
+          <!-- album 5 -->
+
+
+        <div class="album-card">
+          <img src="assets/images/album5.jpg" alt="No Labels: Part 01">
+          <h4>No Labels: Part 01</h4>
+          <p>£24.99</p>
+          <button onclick="toggleDetails(this)">Show Details</button>
+          <div class="album-details">
+            <p><strong>Artist:</strong> Yeonjun </p>
+            <p><strong>Year:</strong> 2025</p>
+            <p><strong>Format:</strong> CD, Digital</p>
+            <p><strong>Description:</strong> No Labels: Part 01 is the debut solo extended play (EP) by South Korean singer Yeonjun, released on November 7, 2025, by Big Hit Music.</p>
+          </div>
+          <button onclick="addToCart('No Labels: Part 01', 24.99)">Add to Cart</button></div>
+
+
+      </div>
+      <div class="cta-buttons">
+        <button onclick="location.href='albums.html'">View All Albums</button>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <section class="merch-preview">
+      <h3>Featured Merchandise</h3>
+      <div class="album-grid">
+        
+
+
+        <!-- merch 1 -->
+        
+        <div class="album-card">
+        <img src="assets/images/merch1.jpg" alt="Taylor Swift Hoodie">
+        <h4>Taylor Swift Hoodie</h4>
+        <p>£69.99</p>
+        <button onclick="toggleDetails(this)">Show Details</button>
+        <div class="album-details">
+          <p><strong>Type:</strong> Hoodie </p>
+          <p><strong>Artist:</strong> Taylor Swift </p>
+          <p><strong>Includes:</strong> Hoodie, Stickers </p>
+        </div>
+        <button onclick="addToCart('Taylor Swift Hoodie', 69.99)">Add to Cart</button>
+      </div>
+
+
+
+
+        <!-- merch 2 -->
+
+
+        <div class="album-card">
+        <img src="assets/images/merch3.jpg" alt="Enhypen Lightstick">
+        <h4>Enhypen Lightstick</h4>
+        <p>£68.99</p>
+        <button onclick="toggleDetails(this)">Show Details</button>
+        <div class="album-details">
+          <p><strong>Type:</strong> Official Lightstick</p>
+          <p><strong>Artist:</strong> Enhypen </p>
+          <p><strong>Includes:</strong> Strap, Box, Photocard</p>
+        </div>
+        <button onclick="addToCart('Enhypen Lightstick', 68.99)">Add to Cart</button>
+      </div>
+
+
+
+
+        <!-- merch 3 -->
+
+        
+        <div class="album-card">
+        <img src="assets/images/merch5.jpg" alt="Tomorrow X Together Lightstick">
+        <h4>Tomorrow X Together Lightstick</h4>
+        <p>£67.99</p>
+        <button onclick="toggleDetails(this)">Show Details</button>
+        <div class="album-details">
+          <p><strong>Type:</strong> Official Lightstick</p>
+          <p><strong>Artist:</strong> Tomorrow X Together </p>
+          <p><strong>Includes:</strong> Strap, Box, Photocard</p>
+        </div>
+        <button onclick="addToCart('Tomorrow X Together Lightstick', 67.99)">Add to Cart</button>
+      </div>
+
+
+      </div>
+      <div class="cta-buttons">
+        <button onclick="location.href='merchandise.html'">View All Merchandise</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025, The B-Side. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
