@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The B-Side - Albums</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="assets/icons/logo.jpeg" alt="The B-Side logo" class="logo">
+    <h1>The B-Side</h1>
+    <input type="text" placeholder="Search albums..." class="search-bar">
+    <a href="cart.html" class="cart-link">🛒 Cart (<span id="cartCount">0</span>)</a>
+  </header>
+
+  <nav>
+  <a href="index.html">Home</a>
+  <a href="albums.html">Albums</a>
+  <a href="merchandise.html">Merchandise</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main class="container">
+  <h2>All Albums</h2>
+
+  <!-- English Pop -->
+  <section class="genre-group">
+    <h3>English Pop</h3>
+    <div class="album-grid">
+
+      <!-- al 1 -->
+    <div class="album-card">
+          <img src="assets/images/album1.jpg" alt="Lost in Heaven">
+          <h4>Lost in Heaven</h4>
+          <p>£13.99</p>
+          <button onclick="toggleDetails(this)">Show Details</button>
+          <div class="album-details">
+            <p><strong>Artist:</strong> Chase Atlantic </p>
+            <p><strong>Year:</strong> 2024 </p>
+            <p><strong>Format:</strong> CD, Digital</p>
+            <p><strong>Description:</strong> Lost in Heaven is the fourth studio album by alternative-R&B trio Chase Atlantic, released on 1 November 2024 through Fearless Records. </p>
+            <p class="status available">Available</p>
+          </div>
+          <button onclick="addToCart('Lost in Heaven', 13.99)">Add to Cart</button></div>
+
+      
+      <!-- al 2 -->
+      <div class="album-card">
+        <img src="assets/images/album2.jpg" alt="Eternal Sunshine">
+        <h4>Eternal Sunshine</h4>
+        <p>£12.99</p>
+        <button onclick="toggleDetails(this)">Show Details</button>
+        <div class="album-details">
+          <p><strong>Artist:</strong> Ariana Grande </p>
+          <p><strong>Year:</strong> 2024</p>
+          <p><strong>Format:</strong> CD, Digital</p>
+          <p><strong>Description:</strong> Eternal Sunshine is the seventh studio album by American singer-songwriter Ariana Grande. It was released on March 8, 2024, by Republic Records. </p>
+          <p class="status available">Available</p>
+      </div>
+      <button onclick="addToCart('Eternal Sunshine', 12.99)">Add to Cart</button></div>
+
+
+      <!-- al 3 -->
+      <div class="album-card">
+        <img src="assets/images/album3.jpg" alt="Harry's House">
+        <h4>Harry's House</h4>
+        <p>£11.99</p>
+        <button onclick="toggleDetails(this)">Show Details</button>
+        <div class="album-details">
+          <p><strong>Artist:</strong> Harry Styles </p>
+          <p><strong>Year:</strong> 2022</p>
+          <p><strong>Format:</strong> CD, Digital</p>
+          <p><strong>Description:</strong> Harry's House is the third studio album by English singer and songwriter Harry Styles, released on 20 May 2022 by Erskine and Columbia Records. </p>
+          <p class="status available">Available</p>
+      </div>
+      <button onclick="addToCart('Harrys House', 11.99)">Add to Cart</button></div>
+    </div>
+  </section>
+
+
+
+  <!-- K-Pop -->
+  <section class="genre-group">
+    <h3>K-Pop</h3>
+    <div class="album-grid">
+
+      <!-- al 4 -->
+      <div class="album-card">   
+          <img src="assets/images/album4.jpg" alt="Do It">
+          <h4>Do It</h4>
+          <p>£23.99</p>
+          <button onclick="toggleDetails(this)">Show Details</button>
+          <div class="album-details">
+            <p><strong>Artist:</strong> Stray Kids </p>
+            <p><strong>Year:</strong> 2025 </p>
+            <p><strong>Format:</strong> CD, Digital</p>
+            <p><strong>Description:</strong> Do It is the second mixtape by South Korean boy band Stray Kids. It was released on November 21, 2025, through JYP Entertainment and Republic Records. </p>
+            <p class="status available">Available</p>
+          </div>
+          <button onclick="addToCart('Do It', 23.99)">Add to Cart</button></div>
+
+      <!-- al 5 -->
+
+      <div class="album-card">
+          <img src="assets/images/album5.jpg" alt="No Labels: Part 01">
+          <h4>No Labels: Part 01</h4>
+          <p>£24.99</p>
+          <button onclick="toggleDetails(this)">Show Details</button>
+          <div class="album-details">
+            <p><strong>Artist:</strong> Yeonjun </p>
+            <p><strong>Year:</strong> 2025 </p>
+            <p><strong>Format:</strong> CD, Digital</p>
+            <p><strong>Description:</strong> No Labels: Part 01 is the debut solo extended play (EP) by South Korean singer Yeonjun, released on November 7, 2025, by Big Hit Music.</p>
+            <p class="status available">Available</p>
+          </div>
+          <button onclick="addToCart('No Labels: Part 01', 24.99)">Add to Cart</button></div>
+
+
+
+      <!-- al 6 -->
+
+      <div class="album-card">
+          <img src="assets/images/album6.jpg" alt="The Action">
+          <h4>The Action</h4>
+          <p>£189.99</p>
+          <button onclick="toggleDetails(this)">Show Details</button>
+          <div class="album-details">
+            <p><strong>Artist:</strong> BoyNextDoor </p>
+            <p><strong>Year:</strong> 2025 </p>
+            <p><strong>Format:</strong> CD, Digital</p>
+            <p><strong>Description:</strong> The Action is the fifth extended play (EP) by South Korean boy band BoyNextDoor. It was released on October 20, 2025, through KOZ Entertainmen.</p>
+            <p class="status available">Available</p>
+          </div>
+          <button onclick="addToCart('The Action', 18.99)">Add to Cart</button></div>
+
+    
+    </div>
+  </section>
+
+
+  <!-- Vinyl Classics -->
+  <section class="genre-group">
+    <h3>Vinyl Classics</h3>
+    <div class="album-grid">
+
+      <!-- al 7 -->
+      <div class="album-card">
+        <img src="assets/images/album7.jpg" alt="The Art of Loving">
+        <h4>The Art of Loving</h4>
+        <p>£34.99</p>
+        <button onclick="toggleDetails(this)">Show Details</button>
+        <div class="album-details">
+          <p><strong>Artist:</strong> Olivia Dean </p>
+          <p><strong>Year:</strong> 2025 </p>
+          <p><strong>Format:</strong> Vinyl 12" </p>
+          <p><strong>Description:</strong> The Art of Loving is the second studio album by English singer Olivia Dean. It was released on 26 September 2025 through Capitol Records and Polydor Records. </p>
+          <p class="status available">Available</p>
+      </div>
+      <button onclick="addToCart('The Art of Loving', 34.99)">Add to Cart</button></div>
+
+      <!-- al 8 -->
+      <div class="album-card">
+        <img src="assets/images/album8.jpg" alt="Short n' Sweet">
+        <h4>Short n' Sweet</h4>
+        <p>£40.99</p>
+        <button onclick="toggleDetails(this)">Show Details</button>
+        <div class="album-details">
+          <p><strong>Artist:</strong> Sabrina Carpenter </p>
+          <p><strong>Year:</strong> 2024 </p>
+          <p><strong>Format:</strong> Vinyl 12" </p>
+          <p><strong>Description:</strong> Short n' Sweet is the sixth studio album by American singer Sabrina Carpenter. It was released on August 23, 2024, by Island Records. </p>
+          <p class="status available">Available</p>
+      </div>
+      <button onclick="addToCart('Short n Sweet', 40.99)">Add to Cart</button></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025, The B-Side. All rights reserved.</p>
+  </footer>
+<script src="scripts.js"> </script>
+</main>
+</body>
+</html>
