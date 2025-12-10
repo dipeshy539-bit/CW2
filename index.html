@@ -10,14 +10,21 @@
 
   <!-- Header -->
   <header>
-    <img src="assets/icons/logo.jpg" alt="The B-Side logo" class="logo" />
-    <h1>The B-Side</h1>
-    <input type="text" id="searchInput" class="search-bar" placeholder="Search albums..." />
-    <a href="cart.html" class="cart-link">🛒 Cart (<span id="cartCount">0</span>)</a>
+    <div class="header-row">
+      <div class="logo-title">
+        <img src="assets/icons/logo.jpg" alt="logo" class="logo" />
+        <h1>The B-Side</h1>
+      </div>
+      <div class="search-cart">
+        <input type="text" placeholder="Search albums..." class="search-bar" />
+        <a href="cart.html" class="cart-link">🛒<span id="cartCount">1</span></a>
+      </div>
+    </div>
   </header>
 
-  <!-- Navigation -->
-  <nav>
+
+
+  <nav class="nav-links">
     <a href="index.html">Home</a>
     <a href="albums.html">Albums</a>
     <a href="merchandise.html">Merchandise</a>
@@ -37,7 +44,7 @@
   <main class="container">
   <section class="split-showcase">
 
-    <h2><p>Featured Albums and Merchandises</p></h2>
+    <h2>Featured Albums and Merchandises</h2>
 
     <!-- Row 1 -->
     <div class="split-row">
@@ -74,7 +81,7 @@
       </a>
       <a href="merchandise.html" class="card-link">
       <div class="split-card">
-        <img src="assets/images/merch3.jpeg" alt="The Action">
+        <img src="assets/images/merch3.jpeg" alt="Enhypen Lightstick">
         <div class="split-overlay">
           <h2>Enhypen Lightstick</h2>
           <p>£68.99</p>
