@@ -8,24 +8,32 @@
 </head>
 <body>
   <header>
-    <img src="assets/icons/logo.jpg" alt="The B-Side logo" class="logo">
-    <h1>The B-Side</h1>
-    <input type="text" placeholder="Search..." class="search-bar" aria-label="Search">
-    <a href="cart.html" class="cart-link">🛒 Cart (<span id="cartCount">0</span>)</a>
+    <div class="header-row">
+      <div class="logo-title">
+        <img src="assets/icons/logo.jpg" alt="logo" class="logo" />
+        <h1>The B-Side</h1>
+      </div>
+      <div class="search-cart">
+        <input type="text" placeholder="Search albums..." class="search-bar" />
+        <a href="cart.html" class="cart-link">🛒<span id="cartCount">1</span></a>
+      </div>
+    </div>
   </header>
 
-  <nav>
-  <a href="index.html">Home</a>
-  <a href="albums.html">Albums</a>
-  <a href="merchandise.html">Merchandise</a>
-  <a href="contact.html">Contact</a>
-</nav>
+
+  <!-- Navigation -->
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="albums.html">Albums</a>
+    <a href="merchandise.html">Merchandise</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
   <main class="container">
     <h2>Contact Us</h2>
     <p>Questions, requests, or feedback? Send us a message.</p>
 
-    <form id="contactForm" novalidate>
+    <form id="contactForm">
       <label for="name">Name</label>
       <input id="name" name="name" type="text" required placeholder="Your name" aria-required="true">
 
