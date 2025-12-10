@@ -1,7 +1,6 @@
-// --- Toggle album details ---
 function toggleDetails(button) {
-  const card = button.closest('.album-card'); // find the parent card
-  const details = card.querySelector('.album-details'); // find details inside card
+  const card = button.closest('.album-card');
+  const details = card.querySelector('.album-details');
   if (!details) return;
 
   details.classList.toggle('show');
@@ -10,7 +9,6 @@ function toggleDetails(button) {
     : 'Show Details';
 }
 
-// --- Cart system using LocalStorage ---
 function getCart() {
   return JSON.parse(localStorage.getItem('cart') || '[]');
 }
@@ -23,16 +21,16 @@ function saveCart(cart) {
 
 function addToCart(itemName, price) {
   const cart = getCart();
-  cart.push({ name: itemName, price: price });   //  store as object
+  cart.push({ name: itemName, price: price });
   saveCart(cart);
-  showMessage(`${itemName} added to cart!`, '#B71C1C'); // Deep Red for success
+  showMessage(`${itemName} added to cart!`, '#B71C1C');
 }
 
 function clearCart() {
   localStorage.removeItem('cart');
   updateCartCount();
   updateCartList();
-  showMessage('Cart cleared.', '#8B0000'); // Dark Red
+  showMessage('Cart cleared.', '#8B0000');
 }
 
 function updateCartCount() {
@@ -44,6 +42,7 @@ function updateCartCount() {
 
 function updateCartList() {
   const list = document.getElementById('cartItems');
+  const totalEl = document.getElementById('cartTotal');
   if (!list) return;
 
   const cart = getCart();
@@ -51,50 +50,56 @@ function updateCartList() {
 
   if (cart.length === 0) {
     list.innerHTML = '<li>Your cart is empty.</li>';
+    if (totalEl) totalEl.textContent = '£0.00';
     return;
   }
-
+  let total = 0;
   cart.forEach((item, index) => {
+    total += item.price;
     const li = document.createElement('li');
     li.innerHTML = `
-      <span>${item.name} - £${item.price}</span>
+      <span>${item.name} - £${item.price.toFixed(2)}</span>
       <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>
     `;
     list.appendChild(li);
   });
+  if (totalEl) totalEl.textContent = `£${total.toFixed(2)}`;
 }
 
 function removeFromCart(index) {
   const cart = getCart();
   cart.splice(index, 1);
   saveCart(cart);
-  showMessage('Item removed from cart.', '#D32F2F'); // Bright Red for removal
+  showMessage('Item removed from cart.', '#D32F2F');
 }
 
-// --- Status message helper ---
-function showMessage(msg, color = '#000000') { // Default black text on white background
+function showMessage(msg, color = '#000000') {
   let status = document.getElementById('cartStatus');
   if (!status) {
     status = document.createElement('div');
     status.id = 'cartStatus';
     status.style.marginTop = '10px';
     status.style.fontWeight = '600';
-    status.style.transition = 'opacity 0.5s ease'; // fade effect
-    document.body.appendChild(status);
+    status.style.transition = 'opacity 0.5s ease';
+    status.setAttribute('role', 'status');
+    status.setAttribute('aria-live', 'polite');
+    const cartInfo = document.querySelector('.cart-info');
+    if (cartInfo) cartInfo.appendChild(status);
   }
+
   status.textContent = msg;
   status.style.color = color;
-  status.style.backgroundColor = '#FFEBEE'; 
+  status.style.backgroundColor = '#FFEBEE';
   status.style.padding = '6px';
   status.style.borderRadius = '4px';
   status.style.opacity = '1';
 
   setTimeout(() => {
     status.style.opacity = '0';
+    setTimeout(() => status.remove(), 500);
   }, 2500);
 }
 
-// --- Page init ---
 document.addEventListener('DOMContentLoaded', () => {
   updateCartCount();
   updateCartList();
@@ -102,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setupContactForm();
 });
 
-// --- Simple search filter for visible cards ---
 function setupSearch() {
   const input = document.getElementById('searchInput') || document.querySelector('.search-bar');
   if (!input) return;
@@ -123,7 +127,6 @@ function setupSearch() {
   });
 }
 
-// --- Contact form validation ---
 function setupContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
@@ -134,7 +137,6 @@ function setupContactForm() {
     const message = document.getElementById('message');
     const status = document.getElementById('formStatus');
 
-    // Required fields check
     if (!name?.value.trim() || !email?.value.trim() || !message?.value.trim()) {
       e.preventDefault();
       status.textContent = 'Please fill in all required fields.';
@@ -142,7 +144,6 @@ function setupContactForm() {
       return;
     }
 
-    // Name: no digits allowed
     if (/\d/.test(name.value)) {
       e.preventDefault();
       status.textContent = 'Name cannot contain numbers.';
@@ -150,7 +151,6 @@ function setupContactForm() {
       return;
     }
 
-    // Email: must contain @ and domain
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
     if (!emailOk) {
       e.preventDefault();
@@ -159,12 +159,13 @@ function setupContactForm() {
       return;
     }
 
-    // Success
+    e.preventDefault();
     status.textContent = `Thank you for contacting us, ${name.value}!`;
     status.style.color = '#B71C1C';
     status.style.backgroundColor = '#FFEBEE';
     status.style.padding = '6px';
     status.style.borderRadius = '4px';
+    status.setAttribute('role', 'status');
+    status.setAttribute('aria-live', 'polite');
   });
-
 }
