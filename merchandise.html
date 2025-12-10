@@ -8,18 +8,27 @@
 </head>
 <body>
   <header>
-    <img src="assets/icons/logo.jpg" alt="The B-Side logo" class="logo">
-    <h1>The B-Side</h1>
-    <input type="text" id="searchInput" placeholder="Search merchandise..." class="search-bar" aria-label="Search merchandise">
-    <a href="cart.html" class="cart-link">🛒 Cart (<span id="cartCount">0</span>)</a>
-  </header>
+  <div class="header-row">
+    <div class="logo-title">
+      <img src="assets/icons/logo.jpg" alt="logo" class="logo" />
+      <h1>The B-Side</h1>
+    </div>
 
-  <nav>
-  <a href="index.html">Home</a>
-  <a href="albums.html">Albums</a>
-  <a href="merchandise.html">Merchandise</a>
-  <a href="contact.html">Contact</a>
-</nav>
+    <div class="search-cart">
+      <input type="text" placeholder="Search albums..." class="search-bar" />
+      <a href="cart.html" class="cart-link">🛒<span id="cartCount">1</span></a>
+    </div>
+  </div>
+</header>
+
+
+  
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="albums.html">Albums</a>
+    <a href="merchandise.html">Merchandise</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
   <main class="container">
     <h2>Merchandise</h2>
@@ -30,7 +39,7 @@
     <div class="album-grid" id="merchGrid">
 
   <!-- Taylor Swift Hoodie -->
-  <div class="album-card">
+  <div class="album-card" data-name="Taylor Swift Hoodie">
     <img src="assets/images/merch1.jpeg" alt="Taylor Swift Hoodie">
     <h4>Taylor Swift Hoodie</h4>
     <p>£69.99</p>
@@ -48,7 +57,7 @@
   </div>
 
   <!-- The Weeknd XO Hoodie -->
-  <div class="album-card">
+  <div class="album-card" data-name="The Weeknd XO Hoodie">
     <img src="assets/images/merch2.jpeg" alt="The Weeknd XO Hoodie">
     <h4>The Weeknd XO Hoodie</h4>
     <p>£71.99</p>
@@ -66,7 +75,7 @@
   </div>
 
   <!-- Enhypen Lightstick -->
-  <div class="album-card">
+  <div class="album-card" data-name="Enhypen Lightstick">
     <img src="assets/images/merch3.jpeg" alt="Enhypen Lightstick">
     <h4>Enhypen Lightstick</h4>
     <p>£68.99</p>
@@ -84,7 +93,7 @@
   </div>
 
   <!-- Seventeen Lightstick -->
-  <div class="album-card">
+  <div class="album-card" data-name="Seventeen Lightstick">
     <img src="assets/images/merch4.jpeg" alt="Seventeen Lightstick">
     <h4>Seventeen Lightstick</h4>
     <p>£71.99</p>
@@ -102,7 +111,7 @@
   </div>
 
   <!-- Tomorrow X Together Lightstick -->
-  <div class="album-card">
+  <div class="album-card" data-name="Tomorrow X Together Lightstick">
     <img src="assets/images/merch5.jpeg" alt="Tomorrow X Together Lightstick">
     <h4>Tomorrow X Together Lightstick</h4>
     <p>£67.99</p>
@@ -120,7 +129,7 @@
   </div>
 
   <!-- TWS Lightstick -->
-  <div class="album-card">
+  <div class="album-card" data-name="TWS Lightstick">
     <img src="assets/images/merch6.jpeg" alt="TWS Lightstick">
     <h4>TWS Lightstick</h4>
     <p>£65.99</p>
