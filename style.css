@@ -21,7 +21,6 @@ body {
   color: var(--text); 
 }
 
-
 main.container {
   flex: 1; 
   max-width: 1100px;
@@ -29,9 +28,6 @@ main.container {
   padding: 20px;
 }
 
-
-
-/* Header */
 header {
   position: sticky;
   top: 0;
@@ -83,7 +79,6 @@ header h1 {
   gap: 12px;
 }
 
-
 .search-cart {
   display: flex;
   align-items: center;
@@ -98,8 +93,6 @@ header h1 {
   border: none;
 }
 
-
-/* Cart link */
 .cart-link {
   color: #fff;
   font-weight: 600;
@@ -117,7 +110,6 @@ header h1 {
   margin-left: 6px;
 }
 
-/* Nav */
 nav {
   background: var(--highlight);
   display: flex;
@@ -157,8 +149,6 @@ nav a:focus {
   color: var(--accent);
 }
 
-
-
 @media (max-width: 600px) {
   header {
     flex-direction: row; 
@@ -175,7 +165,6 @@ nav a:focus {
   flex-wrap: wrap;
   width: 100%;
   }
-
 
   .logo-title {
   display: flex;
@@ -240,7 +229,6 @@ nav a:focus {
   font-weight: 600;
 }
 
-/* Hero Section */
 .hero {
   position: relative;
   text-align: center;
@@ -255,7 +243,6 @@ nav a:focus {
   max-height: 500px;
 }
 
-/* Overlay text for desktop */
 .hero-text {
   position: absolute;
   top: 50%;
@@ -278,7 +265,6 @@ nav a:focus {
 .hero-text p {
   font-size: 1.1rem;
 }
-
 
 @media (max-width: 600px) {
   .hero {
@@ -403,7 +389,6 @@ nav a:focus {
   transform: scale(1.03);
 }
 
-/* Sections */
 .new-arrivals,
 .merch-preview {
   padding: 20px;
@@ -413,7 +398,6 @@ nav a:focus {
   margin-top: 0;
 }
 
-/* Grids and cards */
 .album-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
