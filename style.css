@@ -122,6 +122,7 @@ nav a {
   text-decoration: none;
   font-weight: 600;
 }
+
 nav a:hover,
 nav a:focus {
   text-decoration: underline;
@@ -215,7 +216,6 @@ nav a:focus {
   }
 }
 
-/* Layout */
 .container {
   padding: 20px;
   max-width: 1100px;
@@ -355,7 +355,6 @@ nav a:focus {
   font-weight: 600;
 }
 
-
 @media (max-width: 600px) {
   .split-row {
   flex-direction: column;
@@ -416,8 +415,7 @@ nav a:focus {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%; /* ensures equal height */
-
+  height: 100%;
 
   background: var(--card);   
   color: var(--text);  
@@ -465,7 +463,6 @@ nav a:focus {
   margin-top: 6px;
 }
 
-/* Album details */
 .album-details {
   flex-grow: 1;
 
@@ -476,19 +473,21 @@ nav a:focus {
   text-align: left;
   display: none;
 }
+
 .album-details p {
   margin: 4px 0;
 }
+
 .album-details.show {
   display: block;
 }
 
-/* CTA buttons (View All) */
 .cta-buttons {
   display: flex;
   justify-content: center;
   margin-top: 12px;
 }
+
 .cta-buttons button {
   background: var(--silver); 
   color: var(--text);
@@ -500,6 +499,7 @@ nav a:focus {
   box-shadow: 0 1px 3px rgba(183,28,28,0.15);
   transition: background 0.3s ease;
 }
+
 .cta-buttons button:hover,
 .cta-buttons button:focus {
   background: var(--silver-dark); 
@@ -514,7 +514,6 @@ nav a:focus {
   flex-wrap: wrap; 
 }
 
-/* Contact Form Layout */
 #contactForm {
   display: flex;
   flex-direction: column;
@@ -555,8 +554,6 @@ nav a:focus {
   background: #C62828;
 }
 
-
-/* Cart info */
 .cart-info {
   margin-top: 24px;
   background: var(--card); 
@@ -565,17 +562,20 @@ nav a:focus {
   box-shadow: 0 2px 6px rgba(183,28,28,0.15);
   border: 1px solid var(--border); 
 }
+
 .cart-info ul {
   list-style: none;
   padding: 0;
   margin: 0 0 12px 0;
 }
+
 .cart-info li {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px dashed var(--border); 
   padding: 6px 0;
 }
+
 .cart-info .remove-btn {
   background: #FF5252;
   color: #fff;
@@ -584,10 +584,12 @@ nav a:focus {
   border-radius: 6px;
   cursor: pointer;
 }
+
 .cart-info .remove-btn:hover,
 .cart-info .remove-btn:focus {
   background: #D32F2F;
 }
+
 .cart-info button {
   background: var(--accent);
   color: #fff;
@@ -596,6 +598,7 @@ nav a:focus {
   border-radius: 6px;
   cursor: pointer;
 }
+
 .cart-info button:hover,
 .cart-info button:focus {
   background: #C62828;
