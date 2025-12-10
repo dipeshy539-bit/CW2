@@ -23,7 +23,7 @@ function saveCart(cart) {
 
 function addToCart(itemName, price) {
   const cart = getCart();
-  cart.push({ name: itemName, price: price });   // ✅ store as object
+  cart.push({ name: itemName, price: price });   //  store as object
   saveCart(cart);
   showMessage(`${itemName} added to cart!`, '#B71C1C'); // Deep Red for success
 }
@@ -84,7 +84,7 @@ function showMessage(msg, color = '#000000') { // Default black text on white ba
   }
   status.textContent = msg;
   status.style.color = color;
-  status.style.backgroundColor = '#FFEBEE'; // very light red background
+  status.style.backgroundColor = '#FFEBEE'; 
   status.style.padding = '6px';
   status.style.borderRadius = '4px';
   status.style.opacity = '1';
@@ -166,4 +166,5 @@ function setupContactForm() {
     status.style.padding = '6px';
     status.style.borderRadius = '4px';
   });
+
 }
