@@ -9,7 +9,7 @@ function toggleDetails(button) {
     : 'Show Details';
 }
 
-function getCart() {
+function  getCart() {
   return JSON.parse(localStorage.getItem('cart') || '[]');
 }
 
@@ -72,8 +72,8 @@ function removeFromCart(index) {
   saveCart(cart);
   showMessage('Item removed from cart.', '#D32F2F');
 }
-
-function showMessage(msg, color = '#000000') {
+/*pop up msg*/
+function showMessage(msg, color = '#000000') {                   
   let status = document.getElementById('cartStatus');
   if (!status) {
     status = document.createElement('div');
@@ -169,3 +169,4 @@ function setupContactForm() {
     status.setAttribute('aria-live', 'polite');
   });
 }
+
